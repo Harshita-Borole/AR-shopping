@@ -1,0 +1,23 @@
+name: Auto Move Issues in Project
+
+on:
+  issues:
+    types: [opened, labeled, closed]
+
+jobs:
+  move_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move Issue to In Progress
+        if: github.event.issue.labels.*.name contains 'In Progress'
+        run: |
+          gh project item update --project "<PROJECT_ID>" --id ${{ github.event.issue.node_id }} --field "Status" --value "In Progress"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Move Issue to Done
+        if: github.event.issue.state == 'closed'
+        run: |
+          gh project item update --project "<PROJECT_ID>" --id ${{ github.event.issue.node_id }} --field "Status" --value "Done"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
