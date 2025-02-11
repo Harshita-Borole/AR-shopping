@@ -35,27 +35,7 @@ The **AR Shopping App** allows users to visualize products in their space before
 | R3 | Inventory mismatch with e-commerce store | Operational | High | High | Critical | Implement real-time inventory sync |  
 | R4 | Dependency on third-party AR libraries | Vendor/Technical | High | Medium | High | Maintain backup libraries |  
 
-## ⚡ Setup & Installation  
-### 1️⃣ Clone the Repository  
-Go to the repository on GitHub and click on **"Code" → "Download ZIP"**, then extract it on your local machine.  
 
-### 2️⃣ Install Dependencies  
-- Open the project folder in your **code editor**.  
-- Open **GitHub Codespaces** or a local terminal.  
-- Run the required package installation based on your framework.  
 
-### 3️⃣ Start the Development Server  
-- Use GitHub Actions for automated deployment or start the server from GitHub Codespaces.  
 
-## 🛡️ Security Measures  
-- Secure API authentication (OAuth/Firebase)  
-- Data encryption for transactions  
-- Regular security audits  
 
-## 📢 Contributing  
-- Fork the repository & create a feature branch.  
-- Follow commit message conventions (`feat: added AR checkout`).  
-- Submit a pull request for review.  
-
-## 📬 Contact & Support  
-For any issues, please create a **GitHub Issue** or email us at **support@arshopping.com**  
