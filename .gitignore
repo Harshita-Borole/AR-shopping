@@ -1,0 +1,66 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.test
+.env.production
+.env.development
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+.log
+log.txt
+
+# Build files
+dist/
+build/
+.cache/
+
+# Debugging files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+
+# Git merge conflicts
+*.orig
+
+# Firebase & Cloud
+.firebase/
+functions/node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js
+.next/
+
+# Expo / React Native
+.expo/
+.expo-shared/
+web-build/
+
+# Docker
+docker-compose.override.yml
+docker-compose.debug.yml
+docker-compose.production.yml
