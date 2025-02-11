@@ -1,0 +1,17 @@
+name: Auto-update Project Board
+
+on:
+  issues:
+    types: [opened, assigned, closed]
+
+jobs:
+  update-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move to "In Progress" when assigned
+        if: github.event.action == 'assigned'
+        run: gh project item update --project "<PROJECT_ID>" --id ${{ github.event.issue.node_id }} --field "Status" --value "In Progress"
+        
+      - name: Move to "Done" when closed
+        if: github.event.action == 'closed'
+        run: gh project item update --project "<PROJECT_ID>" --id ${{ github.event.issue.node_id }} --field "Status" --value "Done"
